@@ -1,0 +1,62 @@
+package org.javaspring.portfolio;
+
+import java.util.List;
+
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+public class Triangle implements ApplicationContextAware, BeanNameAware {
+
+	List<Point> points;
+	private ApplicationContext context = null;
+	private String beanName;
+	
+	
+	public void draw() {
+		int i=1;
+		for (Point point : points) {
+			System.out.println(getBeanName()+" Point "+i+" is at ("+point.getX()+","+point.getY()+")");
+			i++;
+		}
+			
+	}
+
+	public List<Point> getPoints() {
+		return points;
+	}
+
+	public void setPoints(List<Point> points) {
+		this.points = points;
+	}
+
+	public String getBeanName() {
+		return beanName;
+	}
+	
+	@Override
+	public void setBeanName(String beanName) {
+		this.beanName = beanName;
+		System.out.println("Bean Name: "+beanName);
+	}
+
+
+	@Override
+	public void setApplicationContext(ApplicationContext context) throws BeansException {
+		this.context = context;
+	}
+
+
+	public ApplicationContext getContext() {
+		return context;
+	}
+
+
+	public void setContext(ApplicationContext context) {
+		this.context = context;
+	}
+		
+	
+
+}

@@ -1,0 +1,41 @@
+package org.javaspring.portfolio;
+
+public class Triangle {
+	private int pointA;
+	private int pointB;
+	private int pointC;
+	
+	public void draw() {
+		System.out.println();
+	}
+
+	@Override
+	public String toString() {
+		return "Triangle [pointA=" + pointA + ", pointB=" + pointB + ", pointC=" + pointC + "]";
+	}
+
+	public int getPointA() {
+		return pointA;
+	}
+
+	public void setPointA(int pointA) {
+		this.pointA = pointA;
+	}
+
+	public int getPointB() {
+		return pointB;
+	}
+
+	public void setPointB(int pointB) {
+		this.pointB = pointB;
+	}
+
+	public int getPointC() {
+		return pointC;
+	}
+
+	public void setPointC(int pointC) {
+		this.pointC = pointC;
+	}
+
+}

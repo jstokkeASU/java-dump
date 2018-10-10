@@ -1,0 +1,38 @@
+package org.javaspring.portfolio;
+
+public class Triangle {
+	private String type;
+	private String name;
+	
+	
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getType() {
+		return type;
+	}
+
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "Triangle [type=" + type + ", name=" + name + "]";
+	}
+
+
+	public void draw() {
+		System.out.println(getName() + " drawing of type " + getType() + " has been completed.");
+	}
+
+}

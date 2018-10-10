@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   	xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   	
+   	<bean id="parentTriangle" class="org.javaspring.portfolio.Triangle">
+   		<property name="pointA" ref="pointA" />
+   	</bean>
+
+	<bean id="triangleOne" class="org.javaspring.portfolio.Triangle" parent="parentTriangle" abstract="true">
+		<property name="pointB" ref="pointB" />
+		<property name="pointC" ref="pointC" />
+   	</bean>
+   	
+   	<bean id="triangleTwo" class="org.javaspring.portfolio.Triangle" parent="triangleOne">
+		<property name="pointC" ref="pointD" />
+   	</bean>
+   
+   	<bean id="pointA" class="org.javaspring.portfolio.Point">
+   		<property name="x" value="0" />
+   		<property name="y" value="0" />
+   	</bean>
+   
+   	<bean id="pointB" class="org.javaspring.portfolio.Point">
+		<property name="x" value="12" />
+		<property name="y" value="0" />
+	</bean>
+	
+	<bean id="pointC" class="org.javaspring.portfolio.Point">
+		<property name="x" value="0" />
+		<property name="y" value="8" />
+	</bean>
+	
+	<bean id="pointD" class="org.javaspring.portfolio.Point" parent="pointC">
+		<property name="x" value="8" />
+	</bean>
+   
+   
+  
+   
+</beans>

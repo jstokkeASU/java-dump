@@ -1,0 +1,26 @@
+
+public class Counter {
+
+	public static void main(String[] args) {
+		for (int i=1; i<101; i++) {
+			if (i > 29 && i < 40) {
+				System.out.print("Fizz");
+			}
+			else if (i > 49 && i < 60) {
+				System.out.print("Buzz");
+			}
+			else if ((i % 10 == 3)){
+				System.out.print("Fizz");
+			}
+			else if ((i % 10 == 5)){
+				System.out.print("Buzz");
+			}
+			else {
+				System.out.print(i);
+			}
+			System.out.print("\n");
+		}
+
+	}
+
+}

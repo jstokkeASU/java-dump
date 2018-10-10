@@ -1,0 +1,5 @@
+package org.javaspring.portfolio;
+
+public class Point {
+
+}

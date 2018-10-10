@@ -1,0 +1,12 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		String original = "A man a plan a canal panama";
+		String[] words = original.split(" ");
+		String altered = "";
+		System.out.println(words);
+
+	}
+
+}

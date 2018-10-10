@@ -1,0 +1,66 @@
+package org.javaspring.portfolio;
+
+public class Triangle {
+	private String name;
+	private String type;
+	private int height;
+	
+	public Triangle() {
+		
+	}
+	
+	public Triangle(String name, int height) {
+		this.name = name;
+		this.height = height;
+	}	
+	
+	public Triangle(String name, String type, int height) {
+		this.name = name;
+		this.type = type;
+		this.height = height;
+	}
+	
+	
+	
+	
+	public int getHeight() {
+		return height;
+	}
+
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getType() {
+		return type;
+	}
+
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "Triangle [name=" + name + ", type=" + type + ", height=" + height + "]";
+	}
+
+
+	public void draw() {
+		System.out.println(getName() + " drawing of " + getType() + " type has been completed with a height of "+getHeight()+".");
+	}
+
+}

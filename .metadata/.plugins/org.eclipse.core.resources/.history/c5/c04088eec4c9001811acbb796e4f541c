@@ -1,0 +1,14 @@
+package org.javaspring.portfolio;
+
+import java.util.List;
+
+public class Triangle {
+
+	List<Point> points;
+	
+	public void draw() {
+		System.out.println("Point One is at "+points.get(0));
+	}
+	
+
+}

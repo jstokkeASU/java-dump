@@ -1,0 +1,20 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		String original = "a gnat a plan a canal panama";
+		String[] words = original.split(" ");
+		String altered = "";
+		for (int i = 0; i < words.length; i++) {
+			String word = words[i];
+			String reverseWord = "";
+			for (int j=word.length()-1; j>=0; j--) {
+				reverseWord += word.charAt(j);
+			}
+			altered += (word + "");
+		}
+		System.out.println(altered);	
+
+	}
+
+}
